@@ -14,17 +14,17 @@ pipeline {
         }
          stage('validate') {
             steps {
-                sh 'validate'
+                sh 'terraform validate'
             }
         }
         stage('Plan') {
             steps {
-                sh 'plan'
+                sh 'terraform plan'
             }
         }
         stage('apply') {
             steps {
-                sh 'apply'
+                sh 'terraform apply'
             }
         }
     }

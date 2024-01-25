@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('Initialize') {
             steps {
-                echo 'Hello World'
+                sh 'terraform init'
             }
         }
         stage('test') {
